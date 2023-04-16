@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/bootstrap_css.css" />
+    <title>Admin Panel</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+        
+        ['Depart', 'percentage'],
+          ['IT',     11],
+          ['Elect',      2],
+          ['Mech',  2],
+          ['ENTC', 5],
+          ['CS',    7]
+        ]);
+
+        var options = {
+          title: 'Number of Students Placed'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>JSPM</h1>
+        </div>
+        <ul>
+            <li><img src="dashboard (2).png" alt="">&nbsp; <span>Dashboard</span> </li>
+            <li><img src="reading-book (1).png" alt="">&nbsp;<span>Students</span> </li>
+            <li><img src="teacher2.png" alt="">&nbsp;<span>Teachers</span> </li>
+            <li><img src="school.png" alt="">&nbsp;<span>College</span> </li>
+            <li><img src="help-web-button.png" alt="">&nbsp; <span>Help</span></li>
+            <li><img src="settings.png" alt="">&nbsp;<span>Settings</span> </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><img src="search.png" alt=""></button>
+                </div>
+                <div class="user">
+                    <img src="notifications.png" alt="">
+                    <div class="img-case">
+                        <img src="user.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="cards">
+                <div class="card">
+                    <div class="box">
+                        <h1>2640</h1>
+                        <h3>Total Number of Students</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="students.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>53</h1>
+                        <h3>Number of Teachers</h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="piechart" style="width: 550px; height: 120px;"></div>
+                </div>
+                <!-- <div class="title">
+                    <h2>Department</h2>
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Number of Students </th>
+                            
+                        </tr>
+                        <tr>
+                            <td>Computer Science Engineering</td>
+                            <td>510</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Information Technology Engineering</td>
+                            <td>240</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Electrnoics and Telecommunication Engineering</td>
+                            <td>510</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Electrical Engineering</td>
+                            <td>210</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Mechanical Engineering</td>
+                            <td>510</td>
+                            
+                        </tr>
+                    </table>
+                </div> -->
+            <!-- </div>
+        </div> -->
+            <div class="content-2">
+                    <div class="title">
+                        <h2>Department</h2>
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Number of Students </th>
+                            </tr>
+                            <tr>
+                                <td>Computer Science Engineering</td>
+                                <td>510</td>
+                            </tr>
+                            <tr>
+                                <td>Information Technology Engineering</td>
+                                <td>240</td>
+                            </tr>
+                            <tr>
+                                <td>Electrnoics and Telecommunication Engineering</td>
+                                <td>510</td>
+                            </tr>
+                            <tr>
+                                <td>Electrical Engineering</td>
+                                <td>210</td>
+                            </tr>
+                            <tr>
+                                <td>Mechanical Engineering</td>
+                                <td>510</td>
+                            </tr>
+                        </table>
+                    </div> 
+                </div>
+</body>
+
+</script>
+</html>
